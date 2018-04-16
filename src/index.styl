@@ -56,6 +56,7 @@
     transition: all .24s ease;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
     border-radius: 50%;
+    z-index: 2;
 }
 .toggle-sm:before {
     height: 14px;
@@ -66,4 +67,21 @@
 }
 .toggle-sm.round {
     border-radius: 16px;
+}
+.label {
+    font-size: 10px;
+    line-height: 1;
+    position: absolute;
+    top: 7px;
+}
+.label-sm {
+    display: none;
+}
+.label-on {
+    color: #ffffff;
+    left: 6px;
+}
+.label-off {
+    color: #000000;
+    right: 6px;
 }

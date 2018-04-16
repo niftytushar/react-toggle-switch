@@ -14,12 +14,20 @@ class ToggleSwitch extends PureComponent {
             'large',
             'sm',
             'small'
-        ])
+        ]),
+        labels: PropTypes.shape({
+            on: PropTypes.string,
+            off: PropTypes.string
+        })
     };
     static defaultProps = {
         checked: false,
         disabled: false,
-        size: 'lg'
+        size: 'lg',
+        labels: {
+            on: 'Yes',
+            off: 'No'
+        }
     };
 
     state = {
@@ -55,6 +63,7 @@ class ToggleSwitch extends PureComponent {
             className,
             disabled,
             size,
+            labels,
             ...props
         } = this.props;
 
@@ -79,7 +88,26 @@ class ToggleSwitch extends PureComponent {
                         styles.round,
                         { [styles.disabled]: disabled }
                     )}
-                />
+                >
+                    <span
+                        className={classNames(
+                            styles.label,
+                            styles.labelOn,
+                            { [styles.labelSm]: size === 'sm' || size === 'small' },
+                        )}
+                    >
+                        {labels.on}
+                    </span>
+                    <span
+                        className={classNames(
+                            styles.label,
+                            styles.labelOff,
+                            { [styles.labelSm]: size === 'sm' || size === 'small' },
+                        )}
+                    >
+                        {labels.off}
+                    </span>
+                </div>
             </Anchor>
         );
     }

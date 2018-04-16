@@ -1,4 +1,4 @@
-/*! react-toggle-switch v0.5.7 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-toggle-switch */
+/*! react-toggle-switch v0.5.7 | (c) 2018 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-toggle-switch */
 .toggle-switch---switch---3EchW {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -83,6 +83,7 @@
   -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
   box-shadow: 0 1px 4px rgba(0,0,0,0.3);
   border-radius: 50%;
+  z-index: 2;
 }
 .toggle-switch---toggle-sm---20q-N:before {
   height: 14px;
@@ -93,6 +94,23 @@
 }
 .toggle-switch---toggle-sm---20q-N.toggle-switch---round---1fvZN {
   border-radius: 16px;
+}
+.toggle-switch---label---3qdIU {
+  font-size: 10px;
+  line-height: 1;
+  position: absolute;
+  top: 7px;
+}
+.toggle-switch---label-sm---3KqkO {
+  display: none;
+}
+.toggle-switch---label-on---20dDq {
+  color: #fff;
+  left: 6px;
+}
+.toggle-switch---label-off---dfzXH {
+  color: #000;
+  right: 6px;
 }
 
 /*# sourceMappingURL=react-toggle-switch.css.map*/
